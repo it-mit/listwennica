@@ -1,0 +1,115 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+  color: #1f2933;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app__header {
+  background: #0d6efd;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.app__main {
+  flex: 1;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.chat-form {
+  display: grid;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.chat-form__label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.chat-form__select,
+.chat-form__textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #f8fafc;
+  resize: vertical;
+}
+
+.chat-form__button {
+  justify-self: flex-end;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-form__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.chat-form__button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.25);
+}
+
+.chat-response {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.chat-response__title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chat-response__text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.chat-response__error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.chat-response__placeholder {
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .app__main {
+    padding: 1.5rem;
+  }
+
+  .chat-form,
+  .chat-response {
+    padding: 1.25rem;
+  }
+}
